@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo_header.jpg";
 
 const navItems = [
   { label: "Início", path: "/" },
@@ -17,9 +18,14 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between py-5 md:py-6">
-        <Link to="/" className="text-3xl md:text-4xl font-display font-bold tracking-wide text-white">
-          Bilhares Alencar
+      <div className="container flex items-center justify-between py-2 md:py-3">
+        <Link to="/" className="flex items-center">
+          <img
+            src={logo}
+            alt="Bilhares Alencar"
+            className="h-14 md:h-16 w-auto rounded-lg"
+            style={{ backgroundColor: 'hsl(30, 10%, 8%)' }}
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-2">

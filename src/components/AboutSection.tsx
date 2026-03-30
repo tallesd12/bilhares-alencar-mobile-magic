@@ -8,7 +8,8 @@ const AboutSection = () => {
           <img
             src={logo}
             alt="Bilhares Alencar"
-            className="w-48 md:w-64 h-auto"
+            className="w-48 md:w-64 h-auto rounded-lg"
+            style={{ backgroundColor: 'hsl(30, 10%, 8%)' }}
           />
         </div>
 
