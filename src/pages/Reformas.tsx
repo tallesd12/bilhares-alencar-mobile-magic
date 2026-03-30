@@ -17,10 +17,10 @@ const Reformas = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <div className="container py-10">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-gradient">
+        <h1 className="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-white">
           Reformas
         </h1>
-        <p className="text-center text-muted-foreground font-body mb-10">
+        <p className="text-center text-white font-body text-lg mb-10">
           Reformamos sua mesa de sinuca com qualidade e garantia.
         </p>
 
@@ -30,13 +30,13 @@ const Reformas = () => {
               <div className="p-2 bg-primary/20 rounded-lg">
                 <Wrench className="text-primary" size={24} />
               </div>
-              <h2 className="text-xl font-display font-bold">Nossos Serviços</h2>
+              <h2 className="text-xl font-display font-bold text-white">Nossos Serviços</h2>
             </div>
             <ul className="space-y-4">
               {servicos.map((s) => (
                 <li key={s} className="flex items-start gap-3 font-body">
                   <CheckCircle className="text-primary mt-0.5 shrink-0" size={20} />
-                  <span className="text-foreground">{s}</span>
+                  <span className="text-white text-base md:text-lg">{s}</span>
                 </li>
               ))}
             </ul>

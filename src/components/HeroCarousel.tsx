@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import mesa1 from "@/assets/mesa1.webp";
 import mesa2 from "@/assets/mesa2.webp";
 import mesa3 from "@/assets/mesa3.webp";
@@ -14,6 +14,16 @@ const captions = [
   "Mesa profissional com bolas",
   "Duas mesas prontas para entrega",
 ];
+
+const topics = [
+  "Mesas novas e seminovas",
+  "Reformamos sua mesa",
+  "Venda de acessórios",
+  "+500 mesas vendidas",
+  "Entregamos em todo DF e Entorno",
+];
+
+const WHATSAPP_URL = "https://abrir.link/XodXT";
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -33,57 +43,82 @@ const HeroCarousel = () => {
 
   return (
     <section className="container py-8">
-      <div className="relative max-w-5xl mx-auto rounded-xl overflow-hidden border border-border">
-        <div className="relative aspect-[16/9]">
-          {images.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={captions[i]}
-              width={1200}
-              height={675}
-              loading={i === 0 ? "eager" : "lazy"}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-                i === current ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-          <div className="absolute bottom-6 left-0 right-0 text-center">
-            <p className="text-white font-body text-sm md:text-base font-medium">
-              {captions[current]}
-            </p>
+      <div className="flex flex-col lg:flex-row gap-8 items-stretch">
+        {/* Carousel - aligned left */}
+        <div className="relative w-full lg:w-3/5 rounded-xl overflow-hidden border border-border">
+          <div className="relative aspect-[4/3]">
+            {images.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={captions[i]}
+                width={1200}
+                height={900}
+                loading={i === 0 ? "eager" : "lazy"}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                  i === current ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            <div className="absolute bottom-6 left-0 right-0 text-center">
+              <p className="text-white font-body text-sm md:text-base font-medium">
+                {captions[current]}
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={prev}
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/70 hover:bg-background/90 text-white p-2 rounded-full transition-all active:scale-95"
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={28} />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/70 hover:bg-background/90 text-white p-2 rounded-full transition-all active:scale-95"
+            aria-label="Próximo"
+          >
+            <ChevronRight size={28} />
+          </button>
+
+          <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  i === current ? "bg-primary w-6" : "bg-white/40"
+                }`}
+                aria-label={`Ir para imagem ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Arrows */}
-        <button
-          onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/70 hover:bg-background/90 text-white p-2 rounded-full transition-all active:scale-95"
-          aria-label="Anterior"
-        >
-          <ChevronLeft size={28} />
-        </button>
-        <button
-          onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/70 hover:bg-background/90 text-white p-2 rounded-full transition-all active:scale-95"
-          aria-label="Próximo"
-        >
-          <ChevronRight size={28} />
-        </button>
-
-        {/* Dots */}
-        <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                i === current ? "bg-primary w-6" : "bg-white/40"
-              }`}
-              aria-label={`Ir para imagem ${i + 1}`}
-            />
-          ))}
+        {/* Topics - right side */}
+        <div className="w-full lg:w-2/5 flex flex-col justify-center gap-5">
+          <ul className="space-y-4">
+            {topics.map((topic) => (
+              <li
+                key={topic}
+                className="flex items-center gap-3 text-white font-body font-bold text-lg md:text-xl lg:text-2xl"
+              >
+                <span className="text-primary text-2xl">•</span>
+                {topic}
+              </li>
+            ))}
+          </ul>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-3 w-full bg-whatsapp text-whatsapp-foreground px-8 py-5 rounded-xl font-body font-bold text-lg md:text-xl hover:bg-whatsapp/85 transition-all active:scale-[0.98] shadow-lg shadow-whatsapp/20 mt-2"
+          >
+            <MessageCircle size={26} />
+            Faça seu Orçamento
+          </a>
         </div>
       </div>
     </section>

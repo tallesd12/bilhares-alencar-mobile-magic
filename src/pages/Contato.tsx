@@ -8,10 +8,10 @@ const Contato = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <div className="container py-10">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-gradient">
+        <h1 className="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-white">
           Contato
         </h1>
-        <p className="text-center text-muted-foreground font-body mb-10">
+        <p className="text-center text-white font-body text-lg mb-10">
           Entre em contato conosco por qualquer um dos canais abaixo.
         </p>
 
@@ -24,8 +24,8 @@ const Contato = () => {
               <Phone className="text-primary" size={24} />
             </div>
             <div>
-              <p className="font-display font-bold">Telefone</p>
-              <p className="text-muted-foreground font-body text-sm">(61) 99999-9999</p>
+              <p className="font-display font-bold text-white text-lg">Telefone</p>
+              <p className="text-white/80 font-body text-base">(61) 99999-9999</p>
             </div>
           </a>
 
@@ -37,8 +37,8 @@ const Contato = () => {
               <Mail className="text-primary" size={24} />
             </div>
             <div>
-              <p className="font-display font-bold">E-mail</p>
-              <p className="text-muted-foreground font-body text-sm">contato@bilharesalencar.com</p>
+              <p className="font-display font-bold text-white text-lg">E-mail</p>
+              <p className="text-white/80 font-body text-base">contato@bilharesalencar.com</p>
             </div>
           </a>
 
@@ -52,8 +52,8 @@ const Contato = () => {
               <MessageCircle className="text-whatsapp" size={24} />
             </div>
             <div>
-              <p className="font-display font-bold">WhatsApp</p>
-              <p className="text-muted-foreground font-body text-sm">Fale conosco agora</p>
+              <p className="font-display font-bold text-white text-lg">WhatsApp</p>
+              <p className="text-white/80 font-body text-base">Fale conosco agora</p>
             </div>
           </a>
 
@@ -62,8 +62,8 @@ const Contato = () => {
               <MapPin className="text-accent" size={24} />
             </div>
             <div>
-              <p className="font-display font-bold">Endereço</p>
-              <p className="text-muted-foreground font-body text-sm">Vicente Pires – DF, Rua 3 Chácara 46A</p>
+              <p className="font-display font-bold text-white text-lg">Endereço</p>
+              <p className="text-white/80 font-body text-base">Vicente Pires – DF, Rua 3 Chácara 46A</p>
             </div>
           </div>
         </div>
