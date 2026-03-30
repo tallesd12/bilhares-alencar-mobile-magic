@@ -42,7 +42,7 @@ const Reformas = () => {
             </ul>
             <div className="mt-8 text-center">
               <a
-                href="https://wa.me/5561999999999?text=Olá! Gostaria de um orçamento para reforma de mesa."
+                href="https://abrir.link/XodXT"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-whatsapp text-whatsapp-foreground px-8 py-3 rounded-full font-body font-semibold text-lg hover:bg-whatsapp/80 transition-all active:scale-95"
