@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
+import InstagramSection from "@/components/InstagramSection";
 import AboutSection from "@/components/AboutSection";
 import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
@@ -10,6 +11,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroCarousel />
+      <InstagramSection />
       <AboutSection />
       <MapSection />
       <Footer />
