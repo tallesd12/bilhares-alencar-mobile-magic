@@ -16,11 +16,11 @@ const captions = [
 ];
 
 const topics = [
-  "Mesas novas e seminovas",
-  "Reformamos sua mesa",
-  "Venda de acessórios",
-  "+500 mesas vendidas",
-  "Entregamos em todo DF e Entorno",
+  { title: "Mesas de Sinuca Novas e Seminovas", desc: "Escolha entre modelos modernos ou clássicos, sempre com qualidade garantida." },
+  { title: "Reforma e Manutenção Especializada", desc: "Devolvemos vida à sua mesa, deixando-a como nova." },
+  { title: "Acessórios Completos para o Jogo", desc: "Tacos, bolas, capas e tudo o que você precisa em um só lugar." },
+  { title: "Mais de 500 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
+  { title: "Entrega Rápida em Todo DF e Entorno", desc: "Receba sua mesa com segurança e praticidade onde estiver." },
 ];
 
 const WHATSAPP_URL = "https://abrir.link/XodXT";
@@ -99,14 +99,16 @@ const HeroCarousel = () => {
 
         {/* Topics - right side */}
         <div className="w-full lg:w-2/5 flex flex-col justify-center gap-5">
-          <ul className="space-y-4">
+          <ul className="space-y-6">
             {topics.map((topic) => (
-              <li
-                key={topic}
-                className="flex items-center gap-3 text-white font-body font-bold text-lg md:text-xl lg:text-2xl"
-              >
-                <span className="text-primary text-2xl">•</span>
-                {topic}
+              <li key={topic.title}>
+                <p className="flex items-center gap-3 text-white font-body font-bold text-lg md:text-xl lg:text-2xl">
+                  <span className="text-primary text-2xl">•</span>
+                  {topic.title}
+                </p>
+                <p className="text-white/60 font-body text-sm md:text-base ml-8 mt-1 italic">
+                  {topic.desc}
+                </p>
               </li>
             ))}
           </ul>
