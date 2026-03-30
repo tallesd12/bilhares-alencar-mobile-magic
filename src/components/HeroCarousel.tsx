@@ -16,11 +16,11 @@ const captions = [
 ];
 
 const topics = [
-  "Mesas novas e seminovas",
-  "Reformamos sua mesa",
-  "Venda de acessórios",
-  "+500 mesas vendidas",
-  "Entregamos em todo DF e Entorno",
+  { title: "Mesas de Sinuca Novas e Seminovas", desc: "Escolha entre modelos modernos ou clássicos, sempre com qualidade garantida." },
+  { title: "Reforma e Manutenção Especializada", desc: "Devolvemos vida à sua mesa, deixando-a como nova." },
+  { title: "Acessórios Completos para o Jogo", desc: "Tacos, bolas, capas e tudo o que você precisa em um só lugar." },
+  { title: "Mais de 500 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
+  { title: "Entrega Rápida em Todo DF e Entorno", desc: "Receba sua mesa com segurança e praticidade onde estiver." },
 ];
 
 const WHATSAPP_URL = "https://abrir.link/XodXT";
