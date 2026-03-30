@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.webp";
 
 const navItems = [
   { label: "Início", path: "/" },
@@ -17,9 +16,9 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between py-2">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="Bilhares Alencar" className="h-14 md:h-16 w-auto" />
+      <div className="container flex items-center justify-between py-4">
+        <Link to="/" className="text-2xl md:text-3xl font-display font-bold tracking-wide text-white">
+          Bilhares Alencar
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

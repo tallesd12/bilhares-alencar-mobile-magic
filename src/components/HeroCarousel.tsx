@@ -27,39 +27,41 @@ const HeroCarousel = () => {
   }, [next]);
 
   return (
-    <section className="relative w-full overflow-hidden">
-      <div className="relative aspect-[16/9] md:aspect-[21/9] w-full">
-        {images.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={captions[i]}
-            width={1280}
-            height={720}
-            loading={i === 0 ? "eager" : "lazy"}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-              i === current ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        <div className="absolute bottom-6 left-0 right-0 text-center">
-          <p className="text-foreground/80 font-body text-sm md:text-base">
-            {captions[current]}
-          </p>
+    <section className="container py-8">
+      <div className="relative max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+        <div className="relative aspect-[4/3]">
+          {images.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={captions[i]}
+              width={800}
+              height={600}
+              loading={i === 0 ? "eager" : "lazy"}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                i === current ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+          <div className="absolute bottom-4 left-0 right-0 text-center">
+            <p className="text-foreground/80 font-body text-sm">
+              {captions[current]}
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              i === current ? "bg-primary w-6" : "bg-foreground/30"
-            }`}
-            aria-label={`Ir para imagem ${i + 1}`}
-          />
-        ))}
+        <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                i === current ? "bg-primary w-6" : "bg-foreground/30"
+              }`}
+              aria-label={`Ir para imagem ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
