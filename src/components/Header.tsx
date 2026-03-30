@@ -2,12 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.webp";
 
 const navItems = [
   { label: "Início", path: "/" },
   { label: "Localização", path: "/localizacao" },
   { label: "Reformas", path: "/reformas" },
-  { label: "Frete", path: "/frete" },
   { label: "Contato", path: "/contato" },
 ];
 
@@ -17,12 +17,11 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="text-2xl md:text-3xl font-display font-bold tracking-wide">
-          <span className="text-gradient">Bilhares Alencar</span>
+      <div className="container flex items-center justify-between py-2">
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Bilhares Alencar" className="h-14 md:h-16 w-auto" />
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
@@ -40,7 +39,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-foreground"
@@ -50,7 +48,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <nav className="md:hidden border-t border-border bg-background/95 backdrop-blur-md animate-in slide-in-from-top-2">
           {navItems.map((item) => (

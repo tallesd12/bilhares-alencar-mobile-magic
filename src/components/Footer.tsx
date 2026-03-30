@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 
+const WHATSAPP_URL = "https://abrir.link/XodXT";
+
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border mt-8">
@@ -21,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 text-center">
           <a
-            href="https://wa.me/5561999999999"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-whatsapp text-whatsapp-foreground px-8 py-3 rounded-full font-body font-semibold text-lg hover:bg-whatsapp/80 transition-all active:scale-95"

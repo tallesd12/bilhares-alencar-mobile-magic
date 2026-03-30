@@ -43,7 +43,7 @@ const Contato = () => {
           </a>
 
           <a
-            href="https://wa.me/5561999999999"
+            href="https://abrir.link/XodXT"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-whatsapp/50 transition-colors"

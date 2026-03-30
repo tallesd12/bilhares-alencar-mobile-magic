@@ -16,7 +16,7 @@ const socials = [
   {
     label: "WhatsApp",
     icon: MessageCircle,
-    href: "https://wa.me/5561999999999",
+    href: "https://abrir.link/XodXT",
     className: "bg-whatsapp hover:bg-whatsapp/80 text-whatsapp-foreground",
   },
 ];
