@@ -8,10 +8,10 @@ const Localizacao = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <div className="container py-10">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-gradient">
+        <h1 className="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-white">
           Localização
         </h1>
-        <p className="text-center text-muted-foreground font-body mb-8">
+        <p className="text-center text-white font-body text-lg mb-8">
           Venha nos visitar! Estamos em Vicente Pires – DF.
         </p>
       </div>
