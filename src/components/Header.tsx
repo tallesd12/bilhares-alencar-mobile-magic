@@ -30,7 +30,7 @@ const Header = () => {
                 "px-4 py-2 rounded-lg font-body font-medium text-sm transition-colors",
                 pathname === item.path
                   ? "bg-primary/20 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  : "text-white hover:text-primary hover:bg-muted"
               )}
             >
               {item.label}
@@ -40,7 +40,7 @@ const Header = () => {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-foreground"
+          className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-white"
           aria-label="Menu"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -58,7 +58,7 @@ const Header = () => {
                 "block px-6 py-3 font-body font-medium text-sm border-b border-border/50 transition-colors",
                 pathname === item.path
                   ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  : "text-white hover:text-primary hover:bg-muted"
               )}
             >
               {item.label}

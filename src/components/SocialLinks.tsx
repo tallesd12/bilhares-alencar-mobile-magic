@@ -1,46 +1,19 @@
-import { Instagram, Facebook, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
-const socials = [
-  {
-    label: "Instagram",
-    icon: Instagram,
-    href: "https://instagram.com/bilharesalencar",
-    className: "bg-secondary hover:bg-accent hover:text-accent-foreground",
-  },
-  {
-    label: "Facebook",
-    icon: Facebook,
-    href: "https://facebook.com/bilharesalencar",
-    className: "bg-secondary hover:bg-accent hover:text-accent-foreground",
-  },
-  {
-    label: "WhatsApp",
-    icon: MessageCircle,
-    href: "https://abrir.link/XodXT",
-    className: "bg-whatsapp hover:bg-whatsapp/80 text-whatsapp-foreground",
-  },
-];
+const WHATSAPP_URL = "https://abrir.link/XodXT";
 
 const SocialLinks = () => {
   return (
     <section className="container py-8">
-      <h2 className="text-xl font-display font-bold text-center mb-4">
-        Siga-nos nas redes
-      </h2>
-      <div className="flex justify-center gap-4">
-        {socials.map((s) => (
-          <a
-            key={s.label}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-2 px-5 py-3 rounded-lg font-body font-medium transition-all ${s.className}`}
-          >
-            <s.icon size={20} />
-            <span className="hidden sm:inline">{s.label}</span>
-          </a>
-        ))}
-      </div>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-3 w-full max-w-2xl mx-auto bg-whatsapp text-whatsapp-foreground px-8 py-5 rounded-xl font-body font-bold text-lg md:text-xl hover:bg-whatsapp/85 transition-all active:scale-[0.98] shadow-lg shadow-whatsapp/20"
+      >
+        <MessageCircle size={26} />
+        Faça seu Orçamento
+      </a>
     </section>
   );
 };

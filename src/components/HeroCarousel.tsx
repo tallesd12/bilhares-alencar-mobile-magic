@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import mesa1 from "@/assets/mesa1.webp";
 import mesa2 from "@/assets/mesa2.webp";
 import mesa3 from "@/assets/mesa3.webp";
@@ -21,6 +22,10 @@ const HeroCarousel = () => {
     setCurrent((prev) => (prev + 1) % images.length);
   }, []);
 
+  const prev = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(next, 4000);
     return () => clearInterval(timer);
@@ -28,15 +33,15 @@ const HeroCarousel = () => {
 
   return (
     <section className="container py-8">
-      <div className="relative max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
-        <div className="relative aspect-[4/3]">
+      <div className="relative max-w-5xl mx-auto rounded-xl overflow-hidden border border-border">
+        <div className="relative aspect-[16/9]">
           {images.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={captions[i]}
-              width={800}
-              height={600}
+              width={1200}
+              height={675}
               loading={i === 0 ? "eager" : "lazy"}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
                 i === current ? "opacity-100" : "opacity-0"
@@ -44,19 +49,37 @@ const HeroCarousel = () => {
             />
           ))}
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-          <div className="absolute bottom-4 left-0 right-0 text-center">
-            <p className="text-foreground/80 font-body text-sm">
+          <div className="absolute bottom-6 left-0 right-0 text-center">
+            <p className="text-white font-body text-sm md:text-base font-medium">
               {captions[current]}
             </p>
           </div>
         </div>
+
+        {/* Arrows */}
+        <button
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/70 hover:bg-background/90 text-white p-2 rounded-full transition-all active:scale-95"
+          aria-label="Anterior"
+        >
+          <ChevronLeft size={28} />
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/70 hover:bg-background/90 text-white p-2 rounded-full transition-all active:scale-95"
+          aria-label="Próximo"
+        >
+          <ChevronRight size={28} />
+        </button>
+
+        {/* Dots */}
         <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
           {images.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
               className={`w-2 h-2 rounded-full transition-all ${
-                i === current ? "bg-primary w-6" : "bg-foreground/30"
+                i === current ? "bg-primary w-6" : "bg-white/40"
               }`}
               aria-label={`Ir para imagem ${i + 1}`}
             />
