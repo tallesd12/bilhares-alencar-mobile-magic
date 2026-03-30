@@ -16,18 +16,18 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="text-2xl md:text-3xl font-display font-bold tracking-wide text-white">
+      <div className="container flex items-center justify-between py-5 md:py-6">
+        <Link to="/" className="text-3xl md:text-4xl font-display font-bold tracking-wide text-white">
           Bilhares Alencar
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-2">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               className={cn(
-                "px-4 py-2 rounded-lg font-body font-medium text-sm transition-colors",
+                "px-5 py-2.5 rounded-lg font-body font-semibold text-base md:text-lg transition-colors",
                 pathname === item.path
                   ? "bg-primary/20 text-primary"
                   : "text-white hover:text-primary hover:bg-muted"
@@ -43,7 +43,7 @@ const Header = () => {
           className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors text-white"
           aria-label="Menu"
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -55,7 +55,7 @@ const Header = () => {
               to={item.path}
               onClick={() => setMenuOpen(false)}
               className={cn(
-                "block px-6 py-3 font-body font-medium text-sm border-b border-border/50 transition-colors",
+                "block px-6 py-4 font-body font-semibold text-lg border-b border-border/50 transition-colors",
                 pathname === item.path
                   ? "bg-primary/10 text-primary"
                   : "text-white hover:text-primary hover:bg-muted"
