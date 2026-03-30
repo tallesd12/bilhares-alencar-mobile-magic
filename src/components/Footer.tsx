@@ -5,16 +5,16 @@ const WHATSAPP_URL = "https://abrir.link/XodXT";
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border mt-8">
-      <div className="container py-8">
+      <div className="max-w-md mx-auto py-8 px-4">
         <h2 className="text-xl font-display font-bold text-center mb-6">Contato</h2>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-body">
-          <a href="tel:+5561999999999" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+        <div className="flex flex-col items-center gap-4 text-sm font-body">
+          <a href="tel:+5561981844887" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <Phone size={18} className="text-primary" />
-            (61) 99999-9999
+            (61) 98184-4887
           </a>
-          <a href="mailto:contato@bilharesalencar.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <a href="mailto:bilharesalencar@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <Mail size={18} className="text-primary" />
-            contato@bilharesalencar.com
+            bilharesalencar@gmail.com
           </a>
           <span className="flex items-center gap-2 text-muted-foreground">
             <MapPin size={18} className="text-accent" />

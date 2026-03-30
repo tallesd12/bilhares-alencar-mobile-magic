@@ -1,32 +1,39 @@
 import { Instagram } from "lucide-react";
 
+const videos = [
+  "/videos/instagram-preview.mp4",
+  "/videos/instagram-preview-2.mp4",
+];
+
 const InstagramSection = () => {
   return (
     <section className="container py-12">
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
-        {/* Smartphone mockup with video */}
-        <div className="shrink-0 relative mx-auto md:mx-0">
-          <div className="relative w-[260px] h-[520px] bg-black rounded-[3rem] border-[6px] border-white/20 shadow-2xl overflow-hidden">
-            {/* Notch */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl z-10" />
-            {/* Video */}
-            <video
-              src="/videos/instagram-preview.mp4"
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
+      <div className="flex flex-col items-center gap-10">
+        {/* Smartphones row - centered */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          {videos.map((src, i) => (
+            <div key={i} className="relative">
+              <div className="relative w-[220px] h-[440px] md:w-[260px] md:h-[520px] bg-black rounded-[3rem] border-[6px] border-white/20 shadow-2xl overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl z-10" />
+                <video
+                  src={src}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Text + CTA */}
-        <div className="flex-1 text-center md:text-left">
+        {/* Text + CTA - centered below on mobile, right-aligned concept on desktop */}
+        <div className="text-center max-w-2xl">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 text-white">
             Siga a <span className="text-primary">Bilhares Alencar</span> no Instagram
           </h2>
-          <p className="text-white/80 font-body text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+          <p className="text-white/80 font-body text-base md:text-lg leading-relaxed mb-8">
             Acompanhe todas as novidades: mesas de sinuca novas e seminovas disponíveis, reformas, acessórios e muito mais. Fique por dentro das nossas vendas e serviços e venha nos visitar em Vicente Pires – DF!
           </p>
           <a
