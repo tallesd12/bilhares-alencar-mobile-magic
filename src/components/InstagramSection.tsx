@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import { useRef, useCallback } from "react";
 
 const videos = [
   "/videos/instagram-preview.mp4",
@@ -6,30 +7,38 @@ const videos = [
 ];
 
 const InstagramSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const currentIndex = useRef(0);
+
+  const handleVideoEnded = useCallback(() => {
+    currentIndex.current = (currentIndex.current + 1) % videos.length;
+    if (videoRef.current) {
+      videoRef.current.src = videos[currentIndex.current];
+      videoRef.current.play();
+    }
+  }, []);
+
   return (
     <section className="container py-12">
-      <div className="flex flex-col items-center gap-10">
-        {/* Smartphones row - centered */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          {videos.map((src, i) => (
-            <div key={i} className="relative">
-              <div className="relative w-[220px] h-[440px] md:w-[260px] md:h-[520px] bg-black rounded-[3rem] border-[6px] border-white/20 shadow-2xl overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl z-10" />
-                <video
-                  src={src}
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              </div>
-            </div>
-          ))}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        {/* Single smartphone */}
+        <div className="relative shrink-0">
+          <div className="relative w-[220px] h-[440px] md:w-[260px] md:h-[520px] bg-black rounded-[3rem] border-[6px] border-white/20 shadow-2xl overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl z-10" />
+            <video
+              ref={videoRef}
+              src={videos[0]}
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              playsInline
+              onEnded={handleVideoEnded}
+            />
+          </div>
         </div>
 
-        {/* Text + CTA - centered below on mobile, right-aligned concept on desktop */}
-        <div className="text-center max-w-2xl">
+        {/* Text + CTA */}
+        <div className="text-center md:text-left max-w-lg">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 text-white">
             Siga a <span className="text-primary">Bilhares Alencar</span> no Instagram
           </h2>
