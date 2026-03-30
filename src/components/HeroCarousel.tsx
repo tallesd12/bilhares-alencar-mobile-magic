@@ -1,17 +1,17 @@
 import { useState, useEffect, useCallback } from "react";
-import mesa1 from "@/assets/mesa1.jpg";
-import mesa2 from "@/assets/mesa2.jpg";
-import mesa3 from "@/assets/mesa3.jpg";
-import mesa4 from "@/assets/mesa4.jpg";
-import mesa5 from "@/assets/mesa5.jpg";
+import mesa1 from "@/assets/mesa1.webp";
+import mesa2 from "@/assets/mesa2.webp";
+import mesa3 from "@/assets/mesa3.webp";
+import mesa4 from "@/assets/mesa4.webp";
+import mesa5 from "@/assets/mesa5.webp";
 
 const images = [mesa1, mesa2, mesa3, mesa4, mesa5];
 const captions = [
-  "Mesa de sinuca clássica",
-  "Bolas de bilhar profissionais",
-  "Salão de jogos premium",
-  "Mesa com feltro azul",
-  "Artesanato e qualidade",
+  "Mesa de sinuca clássica em madeira",
+  "Mesa de sinuca moderna",
+  "Mesa com iluminação noturna",
+  "Mesa profissional com bolas",
+  "Duas mesas prontas para entrega",
 ];
 
 const HeroCarousel = () => {
@@ -42,16 +42,13 @@ const HeroCarousel = () => {
             }`}
           />
         ))}
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        {/* Caption */}
         <div className="absolute bottom-6 left-0 right-0 text-center">
           <p className="text-foreground/80 font-body text-sm md:text-base">
             {captions[current]}
           </p>
         </div>
       </div>
-      {/* Dots */}
       <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
         {images.map((_, i) => (
           <button
