@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "Início", path: "/" },
+  { label: "Quem Somos", path: "/quem-somos" },
   { label: "Localização", path: "/localizacao" },
   { label: "Reformas", path: "/reformas" },
   { label: "Contato", path: "/contato" },
