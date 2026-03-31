@@ -20,7 +20,7 @@ const captions = [
 const topics = [
   { title: "Mesas de Sinuca Novas e Seminovas", desc: "Escolha entre modelos modernos ou clássicos, sempre com qualidade garantida." },
   { title: "Reforma e Manutenção Especializada", desc: "Devolvemos vida à sua mesa, deixando-a como nova." },
-  { title: "Mais de 500 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
+  { title: "Mais de 700 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },, desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
   { title: "Entrega Rápida em Todo DF e Entorno", desc: "Receba sua mesa com segurança e praticidade onde estiver." },
 ];
 
