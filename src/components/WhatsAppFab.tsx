@@ -8,7 +8,7 @@ const WhatsAppFab = () => {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-whatsapp text-whatsapp-foreground p-4 rounded-full shadow-lg shadow-whatsapp/30 hover:scale-110 transition-transform active:scale-95"
+      className="fixed bottom-6 right-6 z-50 bg-whatsapp text-whatsapp-foreground p-4 rounded-full shadow-lg shadow-whatsapp/30 hover:scale-110 transition-transform active:scale-95 animate-subtle-bounce"
       aria-label="Contato via WhatsApp"
     >
       <MessageCircle size={28} />
