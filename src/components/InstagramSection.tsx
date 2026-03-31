@@ -4,6 +4,7 @@ import { useRef, useCallback } from "react";
 const videos = [
   "/videos/instagram-preview.mp4",
   "/videos/instagram-preview-2.mp4",
+  "/videos/instagram-preview-3.mp4",
 ];
 
 const InstagramSection = () => {
