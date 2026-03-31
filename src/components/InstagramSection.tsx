@@ -4,6 +4,7 @@ import { useRef, useCallback } from "react";
 const videos = [
   "/videos/instagram-preview.mp4",
   "/videos/instagram-preview-2.mp4",
+  "/videos/instagram-preview-3.mp4",
 ];
 
 const InstagramSection = () => {
@@ -43,7 +44,7 @@ const InstagramSection = () => {
             Siga a <span className="text-primary">Bilhares Alencar</span> no Instagram
           </h2>
           <p className="text-white/80 font-body text-base md:text-lg leading-relaxed mb-8">
-            Acompanhe todas as novidades: mesas de sinuca novas e seminovas disponíveis, reformas, acessórios e muito mais. Fique por dentro das nossas vendas e serviços e venha nos visitar em Vicente Pires – DF!
+            Acompanhe todas as novidades: mesas de sinuca novas e seminovas disponíveis, reformas e muito mais. Fique por dentro das nossas vendas e serviços e venha nos visitar em Vicente Pires – DF!
           </p>
           <a
             href="https://www.instagram.com/bilhares_alencar/"

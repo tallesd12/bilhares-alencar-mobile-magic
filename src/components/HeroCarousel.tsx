@@ -1,15 +1,17 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import mesa1 from "@/assets/mesa1.webp";
-import mesa2 from "@/assets/mesa2.webp";
 import mesa3 from "@/assets/mesa3.webp";
 import mesa4 from "@/assets/mesa4.webp";
 import mesa5 from "@/assets/mesa5.webp";
+import mesa6 from "@/assets/mesa6.png";
+import mesa7 from "@/assets/mesa7.png";
 
-const images = [mesa1, mesa2, mesa3, mesa4, mesa5];
+const images = [mesa6, mesa7, mesa1, mesa3, mesa4, mesa5];
 const captions = [
+  "Mesa de sinuca branca ao ar livre",
+  "Mesa de sinuca com pano vermelho",
   "Mesa de sinuca clássica em madeira",
-  "Mesa de sinuca moderna",
   "Mesa com iluminação noturna",
   "Mesa profissional com bolas",
   "Duas mesas prontas para entrega",
@@ -18,7 +20,6 @@ const captions = [
 const topics = [
   { title: "Mesas de Sinuca Novas e Seminovas", desc: "Escolha entre modelos modernos ou clássicos, sempre com qualidade garantida." },
   { title: "Reforma e Manutenção Especializada", desc: "Devolvemos vida à sua mesa, deixando-a como nova." },
-  { title: "Acessórios Completos para o Jogo", desc: "Tacos, bolas, capas e tudo o que você precisa em um só lugar." },
   { title: "Mais de 500 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
   { title: "Entrega Rápida em Todo DF e Entorno", desc: "Receba sua mesa com segurança e praticidade onde estiver." },
 ];
@@ -55,7 +56,7 @@ const HeroCarousel = () => {
                 width={1200}
                 height={900}
                 loading={i === 0 ? "eager" : "lazy"}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                className={`absolute inset-0 w-full h-full object-contain bg-black/40 transition-opacity duration-700 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
               />
