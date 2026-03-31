@@ -20,7 +20,7 @@ const captions = [
 const topics = [
   { title: "Mesas de Sinuca Novas e Seminovas", desc: "Escolha entre modelos modernos ou clássicos, sempre com qualidade garantida." },
   { title: "Reforma e Manutenção Especializada", desc: "Devolvemos vida à sua mesa, deixando-a como nova." },
-  { title: "Mais de 500 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
+  { title: "Mais de 700 Mesas Vendidas", desc: "Centenas de clientes satisfeitos já escolheram a Bilhares Alencar." },
   { title: "Entrega Rápida em Todo DF e Entorno", desc: "Receba sua mesa com segurança e praticidade onde estiver." },
 ];
 
@@ -117,7 +117,7 @@ const HeroCarousel = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 w-full bg-whatsapp text-whatsapp-foreground px-8 py-5 rounded-xl font-body font-bold text-lg md:text-xl hover:bg-whatsapp/85 transition-all active:scale-[0.98] shadow-lg shadow-whatsapp/20 mt-2"
+            className="flex items-center justify-center gap-3 w-full bg-whatsapp text-whatsapp-foreground px-8 py-5 rounded-xl font-body font-bold text-lg md:text-xl hover:bg-whatsapp/85 transition-all active:scale-[0.98] shadow-lg shadow-whatsapp/20 mt-2 animate-subtle-bounce"
           >
             <MessageCircle size={26} />
             Faça seu Orçamento
