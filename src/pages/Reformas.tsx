@@ -10,6 +10,7 @@ const servicos = [
   "Troca de borrachas das tabelas",
   "Restauração de madeira e acabamento",
   "Desmontagem e montagem para mudança",
+  "Panos personalizados sob encomenda",
 ];
 
 const Reformas = () => {

@@ -56,7 +56,7 @@ const HeroCarousel = () => {
                 width={1200}
                 height={900}
                 loading={i === 0 ? "eager" : "lazy"}
-                className={`absolute inset-0 w-full h-full object-contain bg-black/40 transition-opacity duration-700 ${
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
               />
