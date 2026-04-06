@@ -21,12 +21,6 @@ const AboutSection = () => {
             <p>
               Fundada em 2019, a Bilhares Alencar nasceu com o propósito de unir tradição e qualidade no universo da sinuca. Localizada em Vicente Pires – DF, a empresa se consolidou como referência na venda de mesas de sinuca novas e seminovas, além de oferecer serviços especializados de reforma e manutenção, garantindo que cada mesa mantenha sua beleza e desempenho por muitos anos.
             </p>
-            <p>
-              Aqui você também encontra uma linha completa de acessórios – tacos, bolas, capas e muito mais – tudo pensado para proporcionar a melhor experiência aos apaixonados pelo jogo.
-            </p>
-            <p>
-              A Bilhares Alencar é um espaço aberto à visitação, onde clientes podem conhecer de perto os produtos, sentir a qualidade dos materiais e receber atendimento personalizado. Mais do que vender mesas, nosso objetivo é criar momentos de lazer e convivência, transformando cada partida em uma experiência única.
-            </p>
           </div>
         </div>
       </div>
